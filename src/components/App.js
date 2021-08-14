@@ -6,9 +6,14 @@ function App() {
 
   const [meals, setMeals] = useState([]);
   useEffect(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
+    const abortCont = new AbortController();
+
+    let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`;
+    fetch(url, { signal: abortCont.signal })
     .then(res => res.json())
     .then(data => setMeals(data.meals));
+
+    return () => abortCont.abort();
   });
 
   const [categories, setCategories] = useState([]);
@@ -16,6 +21,8 @@ function App() {
     fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
     .then(res => res.json())
     .then(data => setCategories(data.meals));
+
+    return () => console.log('cleanup');
   }, []);
 
   const handleFilter = (e) => {
