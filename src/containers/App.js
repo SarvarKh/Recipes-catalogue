@@ -1,35 +1,29 @@
 import React, { useState, useEffect } from "react";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      meals: ["Not fetched yet"]
-    }
-  }
+function App() {
+  const [meals, setMeals] = useState(["Not fetched yet"]);
 
-  componentDidMount() {
+  useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood")
-      .then(res => res.json())
-      .then(data => this.setState({meals: data.meals}));
-  }
+    .then(res => res.json())
+    .then(data => setMeals(data.meals));
+  }, [])
 
-  render() {
-    const mealItems = this.state.meals.map(meal => (
-      <div key={meal.idMeal}>
-        <h3>{meal.strMeal}</h3>
-        <div className="img-container">
-          <img src={meal.strMealThumb} />
-        </div>
-      </div>
-    ))
     return (
       <div>
         <h1>Meals</h1>
-        {mealItems}
+        {
+          meals.map(meal => (
+            <div key={meal.idMeal}>
+              <h3>{meal.strMeal}</h3>
+              <div className="img-container">
+                <img src={meal.strMealThumb} />
+              </div>
+            </div>
+          ))
+        }
       </div>
     )
-  }
 }
 
 export default App;
