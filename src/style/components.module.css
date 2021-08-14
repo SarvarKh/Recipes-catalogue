@@ -1,0 +1,22 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-family: 'Caveat', cursive;
+  color: orange;
+}
+
+a {
+  margin-right: 1rem;
+  text-decoration: underline;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+}
