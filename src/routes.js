@@ -1,4 +1,4 @@
-import App from './containers/App';
+import App from './components/App';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Detail from './containers/Detail';
 import Error from './components/Error';
