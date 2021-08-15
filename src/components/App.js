@@ -14,15 +14,13 @@ function App() {
     .then(data => setMeals(data.meals));
 
     return () => abortCont.abort();
-  });
+  }, []);
 
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
     .then(res => res.json())
     .then(data => setCategories(data.meals));
-
-    return () => console.log('cleanup');
   }, []);
 
   const handleFilter = (e) => {
@@ -34,7 +32,7 @@ function App() {
       <h1>Categories</h1>
       <select onChange={(e) => handleFilter(e.target.value)} className="nav-item appearance-none cursor-pointer">
         {categories.map(category => (
-          <option key={indexOf(category)} value={category.strCategory}>
+          <option key={categories.indexOf(category)} value={category.strCategory}>
             {category.strCategory}
           </option>
         ))}
