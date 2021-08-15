@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import mealsReducer from './mealsReducer';
-import selectedMealReducer from './selectedMealReducer';
+import selectedCategoryReducer from './selectedCategoryReducer';
 import categoriesReducer from './categoriesReducer'
 
 const rootReducer = combineReducers({
   meals: mealsReducer,
-  selectedMeal: selectedMealReducer,
+  selectedCategory: selectedCategoryReducer,
   categories: categoriesReducer,
 });
 
