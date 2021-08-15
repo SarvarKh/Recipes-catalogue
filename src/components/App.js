@@ -1,20 +1,15 @@
 import { indexOf } from "lodash";
 import React, { useState, useEffect } from "react";
+import { fetchMeals } from "../actions";
+import { connect } from 'react-redux';
 
-function App() {
+function App({fetchMeals}) {
   const [selectedCategory, setSelectedCategory] = useState('Seafood');
 
   const [meals, setMeals] = useState([]);
   useEffect(() => {
-    const abortCont = new AbortController();
-
-    let url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`;
-    fetch(url, { signal: abortCont.signal })
-    .then(res => res.json())
-    .then(data => setMeals(data.meals));
-
-    return () => abortCont.abort();
-  }, []);
+    fetchMeals();
+  });
 
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -53,4 +48,4 @@ function App() {
   )
 }
 
-export default App;
+export default connect(null, { fetchMeals })(App);

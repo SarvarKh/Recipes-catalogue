@@ -2,10 +2,17 @@ import { FETCH_MEALS } from '../actions/types';
 import { FETCH_CATEGORIES } from '../actions/types';
 import { SELECT_CATEGORY } from '../actions/types';
 
-const fetchMeals = (meals) => ({
-    type: FETCH_MEALS,
-    payload: meals,
-})
+const fetchMeals = () => dispatch => {
+    console.log("fetching....")
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
+        .then(res => res.json())
+        .then(data => 
+            dispatch({
+                type: FETCH_MEALS,
+                payload: data.meals
+            })
+        );
+}
 
 const fetchCategories = (categories) => ({
     type: FETCH_CATEGORIES,
@@ -13,7 +20,7 @@ const fetchCategories = (categories) => ({
 })
 
 const selectCategory = (selectedCategory) => ({
-    type: FETCH_MEALS,
+    type: SELECT_CATEGORY,
     payload: selectedCategory,
 })
 
