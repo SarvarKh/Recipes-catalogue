@@ -1,9 +1,18 @@
 import { FETCH_MEALS } from '../actions/types';
 
-const mealsReducer = (state = '', action) => {
+const initialState = {
+    selectedCategory: "Seafood",
+    meals: [],
+    categories: [],
+}
+
+const mealsReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_MEALS:
-            return action.payload;
+            return {
+                ...state,
+                meals: action.payload
+            };
     
         default:
             return state;
