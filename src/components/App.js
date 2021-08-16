@@ -1,5 +1,5 @@
 import { indexOf } from "lodash";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { fetchCategories, fetchMeals } from "../actions";
 import { connect } from 'react-redux';
 
@@ -12,39 +12,45 @@ function App({fetchMeals, fetchCategories, meals, categories}) {
     fetchCategories();
   }, []);
 
-  const handleFilter = (e) => {
+  const handleClick = (e) => {
     fetchMeals(e);
   }
 
   return (
     <div>
       <h1>Categories</h1>
-      {
-        categories !== undefined ?
-          <select onChange={(e) => handleFilter(e.target.value)} className="nav-item appearance-none cursor-pointer">
-            {categories.map(category => (
-              <option key={categories.indexOf(category)} value={category.strCategory}>
-                {category.strCategory}
-              </option>
-            ))}
-          </select>
-        : <h2>Loading...</h2>
-      
-      }
+      <div className="flex categories-container">
+        {
+          categories !== undefined ?
+            categories.map(category => (
+              <a onClick={() => handleClick(category.strCategory)} key={category.idCategory}>  
+                <div className="category">
+                  <img src={category.strCategoryThumb} />
+                  {category.strCategory}
+                  <p className="category-desc">{category.strCategoryDescription}</p>
+                </div>
+              </a>
+            ))
+          : <h2>Loading...</h2>
+        
+        }
+      </div>
 
       <h1>Meals</h1>
-      {
-        meals !== undefined ?
-          meals.map(meal => (
-            <div key={meal.idMeal}>
-              <h3>{meal.strMeal}</h3>
-              <div className="img-container">
-                <img src={meal.strMealThumb} />
+      <div className="flex meal-container">
+        {
+          meals !== undefined ?
+            meals.map(meal => (
+              <div key={meal.idMeal} className="meal">
+                <h3>{meal.strMeal}</h3>
+                <div className="img-container">
+                  <img src={meal.strMealThumb} />
+                </div>
               </div>
-            </div>
-          ))
-        : <h2>Loading...</h2>
-      }
+            ))
+          : <h2>Loading...</h2>
+        }
+      </div>
     </div>
   )
 }

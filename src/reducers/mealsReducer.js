@@ -9,6 +9,7 @@ const initialState = {
 const mealsReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_MEALS:
+            console.log("FETCH_MEALS...", action.payload);
             return {
                 ...state,
                 meals: action.payload

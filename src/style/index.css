@@ -1,0 +1,36 @@
+.flex {
+    display: flex;
+}
+
+.categories-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category {
+    width: 10rem;
+}
+
+.category img {
+    width: 10rem;
+}
+
+.category-desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.5rem 1rem;
+}
+
+.meal-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.meal {
+    width: 20rem;
+}
+
+.meal img {
+    width: 20rem;
+}
