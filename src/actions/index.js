@@ -17,10 +17,20 @@ const fetchMeals = (category) => dispatch => {
     return () => abortCont.abort();
 }
 
-const fetchCategories = (categories) => ({
-    type: FETCH_CATEGORIES,
-    payload: categories,
-})
+const fetchCategories = () => dispatch => {
+    const abortCont = new AbortController();
+
+    fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
+        .then(res => res.json())
+        .then(data => 
+            dispatch({
+                type: FETCH_CATEGORIES,
+                payload: data.meals,
+            })
+        );
+
+    return () => abortCont.abort();
+}
 
 const selectCategory = (selectedCategory) => ({
     type: SELECT_CATEGORY,

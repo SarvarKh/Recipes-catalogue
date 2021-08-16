@@ -1,20 +1,17 @@
 import { indexOf } from "lodash";
 import React, { useState, useEffect } from "react";
-import { fetchMeals } from "../actions";
+import { fetchCategories, fetchMeals } from "../actions";
 import { connect } from 'react-redux';
 
-function App({fetchMeals, meals}) {
+function App({fetchMeals, fetchCategories, meals}) {
   const [selectedCategory, setSelectedCategory] = useState('Seafood');
   
   useEffect(() => {
-    fetchMeals('Seafood');
+    fetchMeals('Beef');
   }, []);
 
-  const [categories, setCategories] = useState([]);
   useEffect(() => {
-    fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
-    .then(res => res.json())
-    .then(data => setCategories(data.meals));
+    fetchCategories();
   }, []);
 
   const handleFilter = (e) => {
@@ -53,4 +50,4 @@ const mapStateToProps = (state) => {
   return {meals: state.meals.meals}
 }
 
-export default connect(mapStateToProps, { fetchMeals })(App);
+export default connect(mapStateToProps, { fetchMeals, fetchCategories })(App);
