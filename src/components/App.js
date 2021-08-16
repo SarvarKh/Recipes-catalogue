@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import { fetchCategories, fetchMeals } from "../actions";
+import { fetchCategories, fetchMeals, fetchDetailMeal } from "../actions/index";
 import { connect } from 'react-redux';
 import Categories from './Categories';
 import Meals from './Meals'
 
-function App({fetchMeals, fetchCategories, meals, categories}) {  
+function App({fetchMeals, fetchCategories, fetchDetailMeal, meals, categories}) {  
   useEffect(() => {
     fetchMeals('Beef');
   }, []);
@@ -13,14 +13,22 @@ function App({fetchMeals, fetchCategories, meals, categories}) {
     fetchCategories();
   }, []);
 
+  useEffect(() => {
+    fetchDetailMeal('52874');
+  }, []);
+
   const handleClick = (e) => {
     fetchMeals(e);
+  }
+
+  const clickOnDetailMeal = (e) => {
+    fetchDetailMeal(e)
   }
 
   return (
     <div>
       <Categories categories={categories} handleClick={handleClick} />
-      <Meals meals={meals} />
+      <Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
     </div>
   )
 }
@@ -32,4 +40,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchMeals, fetchCategories })(App);
+export default connect(mapStateToProps, { fetchMeals, fetchCategories, fetchDetailMeal })(App);

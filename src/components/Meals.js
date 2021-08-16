@@ -1,4 +1,6 @@
-const Meals = ({meals}) => {
+import { Link } from "react-router-dom";
+
+const Meals = ({meals, clickOnDetailMeal}) => {
     return (
         <>
             <h1>Meals</h1>
@@ -6,12 +8,12 @@ const Meals = ({meals}) => {
                 {
                 meals !== undefined ?
                     meals.map(meal => (
-                    <div key={meal.idMeal} className="meal">
+                    <Link to="./components/DetailMeal" key={meal.idMeal} className="meal" onClick={() => clickOnDetailMeal(meal.idMeal)}>
                         <h3>{meal.strMeal}</h3>
                         <div className="img-container">
                         <img src={meal.strMealThumb} />
                         </div>
-                    </div>
+                    </Link>
                     ))
                 : <h2>Loading...</h2>
                 }

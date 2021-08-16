@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 
 const initialState = {
-    selectedCategory: "Seafood",
+    detailMeal: {},
     meals: [],
     categories: [],
 }

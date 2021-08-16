@@ -1,6 +1,6 @@
 import { FETCH_MEALS } from '../actions/types';
 import { FETCH_CATEGORIES } from '../actions/types';
-import { SELECT_CATEGORY } from '../actions/types';
+import { FETCH_DETAIL_MEAL } from '../actions/types';
 
 const fetchMeals = (category) => dispatch => {
     const abortCont = new AbortController();
@@ -32,9 +32,19 @@ const fetchCategories = () => dispatch => {
     return () => abortCont.abort();
 }
 
-const selectCategory = (selectedCategory) => ({
-    type: SELECT_CATEGORY,
-    payload: selectedCategory,
-})
+const fetchDetailMeal = (mealID) => dispatch => {
+    const abortCont = new AbortController();
 
-export { fetchMeals, fetchCategories, selectCategory };
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
+        .then(res => res.json())
+        .then(data => 
+            dispatch({
+                type: FETCH_DETAIL_MEAL,
+                payload: data.meals[0],
+            })
+        );
+    
+    return () => abortCont.abort();
+}
+
+export { fetchMeals, fetchCategories, fetchDetailMeal };
