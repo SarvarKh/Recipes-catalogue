@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 import { fetchCategories, fetchMeals } from "../actions";
 import { connect } from 'react-redux';
 
-function App({fetchMeals, fetchCategories, meals}) {
-  const [selectedCategory, setSelectedCategory] = useState('Seafood');
-  
+function App({fetchMeals, fetchCategories, meals, categories}) {  
   useEffect(() => {
     fetchMeals('Beef');
   }, []);
@@ -21,13 +19,18 @@ function App({fetchMeals, fetchCategories, meals}) {
   return (
     <div>
       <h1>Categories</h1>
-      <select onChange={(e) => handleFilter(e.target.value)} className="nav-item appearance-none cursor-pointer">
-        {categories.map(category => (
-          <option key={categories.indexOf(category)} value={category.strCategory}>
-            {category.strCategory}
-          </option>
-        ))}
-      </select>
+      {
+        categories !== undefined ?
+          <select onChange={(e) => handleFilter(e.target.value)} className="nav-item appearance-none cursor-pointer">
+            {categories.map(category => (
+              <option key={categories.indexOf(category)} value={category.strCategory}>
+                {category.strCategory}
+              </option>
+            ))}
+          </select>
+        : <h2>Loading...</h2>
+      
+      }
 
       <h1>Meals</h1>
       {
@@ -40,14 +43,17 @@ function App({fetchMeals, fetchCategories, meals}) {
               </div>
             </div>
           ))
-        : <h1>Loading...</h1>
+        : <h2>Loading...</h2>
       }
     </div>
   )
 }
 
 const mapStateToProps = (state) => {
-  return {meals: state.meals.meals}
+  return {
+    meals: state.meals.meals,
+    categories: state.categories.categories,
+  }
 }
 
 export default connect(mapStateToProps, { fetchMeals, fetchCategories })(App);
