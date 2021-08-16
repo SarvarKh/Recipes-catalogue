@@ -3,7 +3,8 @@ import { FETCH_CATEGORIES } from '../actions/types';
 import { SELECT_CATEGORY } from '../actions/types';
 
 const fetchMeals = () => dispatch => {
-    console.log("fetching....")
+    const abortCont = new AbortController();
+
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
         .then(res => res.json())
         .then(data => 
@@ -12,6 +13,8 @@ const fetchMeals = () => dispatch => {
                 payload: data.meals
             })
         );
+    
+    return () => abortCont.abort();
 }
 
 const fetchCategories = (categories) => ({

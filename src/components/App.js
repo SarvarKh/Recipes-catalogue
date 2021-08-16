@@ -3,13 +3,12 @@ import React, { useState, useEffect } from "react";
 import { fetchMeals } from "../actions";
 import { connect } from 'react-redux';
 
-function App({fetchMeals}) {
+function App({fetchMeals, meals}) {
   const [selectedCategory, setSelectedCategory] = useState('Seafood');
-
-  const [meals, setMeals] = useState([]);
+  
   useEffect(() => {
     fetchMeals();
-  });
+  }, []);
 
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -35,17 +34,23 @@ function App({fetchMeals}) {
 
       <h1>Meals</h1>
       {
-        meals.map(meal => (
-          <div key={meal.idMeal}>
-            <h3>{meal.strMeal}</h3>
-            <div className="img-container">
-              <img src={meal.strMealThumb} />
+        meals !== undefined ?
+          meals.map(meal => (
+            <div key={meal.idMeal}>
+              <h3>{meal.strMeal}</h3>
+              <div className="img-container">
+                <img src={meal.strMealThumb} />
+              </div>
             </div>
-          </div>
-        ))
+          ))
+        : <h1>Loading...</h1>
       }
     </div>
   )
 }
 
-export default connect(null, { fetchMeals })(App);
+const mapStateToProps = (state) => {
+  return {meals: state.meals.meals}
+}
+
+export default connect(mapStateToProps, { fetchMeals })(App);
