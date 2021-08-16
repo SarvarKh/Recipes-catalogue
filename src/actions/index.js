@@ -2,10 +2,10 @@ import { FETCH_MEALS } from '../actions/types';
 import { FETCH_CATEGORIES } from '../actions/types';
 import { SELECT_CATEGORY } from '../actions/types';
 
-const fetchMeals = () => dispatch => {
+const fetchMeals = (category) => dispatch => {
     const abortCont = new AbortController();
 
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
         .then(res => res.json())
         .then(data => 
             dispatch({

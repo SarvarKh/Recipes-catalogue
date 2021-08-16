@@ -7,7 +7,7 @@ function App({fetchMeals, meals}) {
   const [selectedCategory, setSelectedCategory] = useState('Seafood');
   
   useEffect(() => {
-    fetchMeals();
+    fetchMeals('Seafood');
   }, []);
 
   const [categories, setCategories] = useState([]);
@@ -18,7 +18,7 @@ function App({fetchMeals, meals}) {
   }, []);
 
   const handleFilter = (e) => {
-    setSelectedCategory(e);
+    fetchMeals(e);
   }
 
   return (
