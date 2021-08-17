@@ -28,7 +28,7 @@ function App({fetchMeals, fetchCategories, fetchDetailMeal, meals, categories}) 
   return (
     <main>
       <form>
-        <input placeholder/>
+        <input placeholder="Search meal by name, main ingredient, country" />
         <button><i class="fas fa-search"></i></button>
       </form>
       <Categories categories={categories} handleClick={handleClick} />

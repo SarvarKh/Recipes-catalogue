@@ -14,6 +14,19 @@ main {
     margin-top: 5rem;
 }
 
+form {
+    margin: 0 auto;
+}
+
+form input {
+    padding: 1rem;
+    width: 30rem;
+}
+
+form i {
+    padding: 1rem;
+}
+
 .flex {
     display: flex;
 }
