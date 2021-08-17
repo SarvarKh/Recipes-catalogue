@@ -5,6 +5,9 @@
   font-size: 1.5rem;
   background: #00203FFF;
   display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .logo {
