@@ -1,9 +1,9 @@
 import { FETCH_MEALS } from '../actions/types';
 import { FETCH_CATEGORIES } from '../actions/types';
 import { FETCH_DETAIL_MEAL } from '../actions/types';
-import { FETCH_BY_NAME } from '../actions/types'
-import { FETCH_BY_INGRIDIENT } from '../actions/types'
-import { FETCH_BY_AREA } from '../actions/types'
+import { FETCH_BY_NAME } from '../actions/types';
+import { FETCH_BY_INGRIDIENT } from '../actions/types';
+import { FETCH_BY_AREA } from '../actions/types';
 
 const fetchMeals = (category) => dispatch => {
     const abortCont = new AbortController();
@@ -58,7 +58,7 @@ const fetchByName = (e) => dispatch => {
         .then(data => 
             dispatch({
                 type: FETCH_BY_NAME,
-                payload: data,
+                payload: data.meals !== null ? data.meals[0] : "",
             })
         );
     
@@ -87,7 +87,7 @@ const fetchByArea = (e) => dispatch => {
         .then(data => 
             dispatch({
                 type: FETCH_BY_AREA,
-                payload: data,
+                payload: data.meals,
             })
         );
     

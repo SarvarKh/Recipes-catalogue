@@ -8,7 +8,6 @@ const rootReducer = combineReducers({
   meals: mealsReducer,
   detailMeal: detailMealReducer,
   categories: categoriesReducer,
-  searchedItem: searchReducer,
   searchedItems: searchReducer,
 });
 

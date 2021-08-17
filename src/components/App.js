@@ -45,17 +45,25 @@ function App({
     e.preventDefault();
     const inputValue = e.target[0].value;
 
-    fetchByName(inputValue);
-    fetchByIngridient(inputValue);
-    fetchByArea(inputValue);
+    e.target[0].name === "by-name" ?
+        fetchByName(inputValue)
+      :
+        fetchByIngridient(inputValue);
+        fetchByArea(inputValue);
   }
 
   return (
     <main>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input placeholder="Search meal by name, main ingredient, area" />
+        <input placeholder="Search meal by name, main ingredient, area" name="by-name" />
         <button type="submit"><i className="fas fa-search"></i></button>
       </form>
+
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input placeholder="Search meal by name, main ingredient, area" name="by-cat-and-area" />
+        <button type="submit"><i className="fas fa-search"></i></button>
+      </form>
+
       <Categories categories={categories} handleClick={handleClick} />
       <Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
     </main>
