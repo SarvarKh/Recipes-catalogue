@@ -2,19 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   font-size: 1.5rem;
+  background: #00203FFF;
+  display: flex;
 }
 
 .logo {
-  font-family: 'Caveat', cursive;
-  color: orange;
+  width: 10rem;
+  height: 4.5rem;
+  background-image: url("../assets/logo5_resized.gif");
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  margin: 0.5rem 1rem;
 }
 
 a {
   margin-right: 1rem;
   text-decoration: underline;
-  color: black;
+  color: #00203FFF;
 }
 
 a:hover {

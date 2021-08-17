@@ -26,10 +26,14 @@ function App({fetchMeals, fetchCategories, fetchDetailMeal, meals, categories}) 
   }
 
   return (
-    <div>
+    <main>
+      <form>
+        <input placeholder/>
+        <button><i class="fas fa-search"></i></button>
+      </form>
       <Categories categories={categories} handleClick={handleClick} />
       <Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
-    </div>
+    </main>
   )
 }
 

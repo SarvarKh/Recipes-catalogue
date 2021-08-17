@@ -9,7 +9,7 @@ import * as styles from './style/components.module.css';
 const Routes = () => (
   <BrowserRouter>
     <div className={styles.navContainer}>
-      <h1 className={styles.logo}>Inspiring Recipes Catalogue</h1>
+      <div className={styles.logo}></div>
       <Navbar />
     </div>
     <Switch>
