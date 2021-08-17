@@ -17,7 +17,8 @@ const DetailMeal = ({detailMeal}) => {
                             <img src={detailMeal.strMealThumb} />
                         </div>
                         <div>#Tags: {detailMeal.strTags}</div>
-                        <a src={detailMeal.strYoutube}>Check out it on YouTube</a>
+                        <iframe width="420" height="345" src={`https://www.youtube.com/embed/${detailMeal.strYoutube.split('=')[1]}`}></iframe>
+                        
                         <table>
                             <tr>
                                 <th>No</th>
