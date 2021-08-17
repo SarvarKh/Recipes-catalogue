@@ -18,8 +18,8 @@
 
 a {
   margin-right: 1rem;
-  text-decoration: underline;
-  color: #00203FFF;
+  text-decoration: none;
+  color: #FFF;
 }
 
 a:hover {

@@ -5,11 +5,12 @@ import DetailMeal from './components/DetailMeal';
 import Error from './components/Error';
 import Navbar from './components/Navbar';
 import * as styles from './style/components.module.css';
+import { Link } from "react-router-dom";
 
 const Routes = () => (
   <BrowserRouter>
     <div className={styles.navContainer}>
-      <div className={styles.logo}></div>
+      <Link to="/" className={styles.logo}></Link>
       <Navbar />
     </div>
     <Switch>
