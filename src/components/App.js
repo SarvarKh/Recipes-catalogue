@@ -1,10 +1,26 @@
 import React, { useEffect } from "react";
-import { fetchCategories, fetchMeals, fetchDetailMeal } from "../actions/index";
+import {
+  fetchCategories,
+  fetchMeals,
+  fetchDetailMeal,
+  fetchByName,
+  fetchByIngridient,
+  fetchByArea,
+} from "../actions/index";
 import { connect } from 'react-redux';
 import Categories from './Categories';
 import Meals from './Meals'
 
-function App({fetchMeals, fetchCategories, fetchDetailMeal, meals, categories}) {  
+function App({
+  fetchMeals,
+  fetchCategories,
+  fetchDetailMeal,
+  fetchByName,
+  fetchByIngridient,
+  fetchByArea,
+  meals,
+  categories
+}) {  
   useEffect(() => {
     fetchMeals('Beef');
   }, []);
@@ -25,11 +41,20 @@ function App({fetchMeals, fetchCategories, fetchDetailMeal, meals, categories}) 
     fetchDetailMeal(e)
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const inputValue = e.target[0].value;
+
+    fetchByName(inputValue);
+    fetchByIngridient(inputValue);
+    fetchByArea(inputValue);
+  }
+
   return (
     <main>
-      <form>
-        <input placeholder="Search meal by name, main ingredient, country" />
-        <button><i class="fas fa-search"></i></button>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input placeholder="Search meal by name, main ingredient, area" />
+        <button type="submit"><i className="fas fa-search"></i></button>
       </form>
       <Categories categories={categories} handleClick={handleClick} />
       <Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
@@ -44,4 +69,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchMeals, fetchCategories, fetchDetailMeal })(App);
+export default connect(mapStateToProps, { fetchMeals, fetchCategories, fetchDetailMeal, fetchByName, fetchByIngridient, fetchByArea })(App);

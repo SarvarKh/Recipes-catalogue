@@ -1,10 +1,8 @@
 import { connect } from "react-redux";
 
 const DetailMeal = ({detailMeal}) => {
-    console.log(detailMeal);
-
     return (
-        <div>
+        <main>
             {
                 detailMeal !== undefined ?
                     <div>
@@ -178,7 +176,7 @@ const DetailMeal = ({detailMeal}) => {
                     
                     : <h2>Please go back to the previous page and select meal to see details...</h2>
             }
-        </div>
+        </main>
     )
 }
 

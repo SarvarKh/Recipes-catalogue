@@ -6,6 +6,8 @@ const initialState = {
     detailMeal: {},
     meals: [],
     categories: [],
+    searchedItem: {},
+    searchedItems: [],
 }
 
 const middleware = [thunk];
