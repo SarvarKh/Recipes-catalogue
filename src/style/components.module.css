@@ -8,6 +8,7 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 5;
 }
 
 .logo {
@@ -20,7 +21,7 @@
 }
 
 a {
-  margin-right: 1rem;
+  margin-right: 2.5rem;
   text-decoration: none;
   color: #fff;
 }
