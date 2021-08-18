@@ -45,7 +45,7 @@ function App({
       fetchByName(inputValue);
     } else {
       fetchByIngridient(inputValue);
-      fetchByArea(inputValue); 
+      fetchByArea(inputValue);
     }
   }
 
@@ -57,7 +57,7 @@ function App({
       </form>
 
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input placeholder="Search meal by name, main ingredient, area" name="by-cat-and-area" />
+        <input placeholder="Search meal by main ingredient (e.g. Chicken Breast) and area (e.g. American, Canadian)" name="by-cat-and-area" />
         <button type="submit"><i className="fas fa-search"></i></button>
       </form>
 

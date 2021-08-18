@@ -69,12 +69,16 @@ const fetchByIngridient = (e) => dispatch => {
 
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${e}`)
         .then(res => res.json())
-        .then(data => 
+        .then(data => data.meals !== null ?
             dispatch({
-                type: FETCH_BY_INGRIDIENT,
-                payload: data,
+                type: FETCH_MEALS,
+                payload: data.meals,
             })
-        );
+            : null
+        )
+        .catch((error) => {
+            console.error('Error:', error);
+          });
     
     return () => abortCont.abort();
 }
@@ -84,12 +88,13 @@ const fetchByArea = (e) => dispatch => {
 
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${e}`)
         .then(res => res.json())
-        .then(data => 
+        .then(data => data.meals !== null ?
             dispatch({
-                type: FETCH_BY_AREA,
+                type: FETCH_MEALS,
                 payload: data.meals,
             })
-        );
+            : null
+        )
     
     return () => abortCont.abort();
 }
