@@ -16,7 +16,6 @@ const Routes = () => (
     </div>
     <Switch>
       <Route path="/" component={App} exact />
-      <Route path="/containers/Detail" component={Detail} />
       <Route path="/components/DetailMeal" component={DetailMeal} />
       <Route component={Error} />
     </Switch>
