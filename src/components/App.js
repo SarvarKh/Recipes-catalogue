@@ -9,7 +9,7 @@ import {
 } from "../actions/index";
 import { connect } from 'react-redux';
 import Categories from './Categories';
-import Meals from './Meals'
+import Meals from './Meals';
 
 function App({
   fetchMeals,
@@ -29,10 +29,6 @@ function App({
     fetchCategories();
   }, []);
 
-  useEffect(() => {
-    fetchDetailMeal('52874');
-  }, []);
-
   const handleClick = (e) => {
     fetchMeals(e);
   }
@@ -45,11 +41,12 @@ function App({
     e.preventDefault();
     const inputValue = e.target[0].value;
 
-    e.target[0].name === "by-name" ?
-        fetchByName(inputValue)
-      :
-        fetchByIngridient(inputValue);
-        fetchByArea(inputValue);
+    if (e.target[0].name === "by-name") {
+      fetchByName(inputValue);
+    } else {
+      fetchByIngridient(inputValue);
+      fetchByArea(inputValue); 
+    }
   }
 
   return (
