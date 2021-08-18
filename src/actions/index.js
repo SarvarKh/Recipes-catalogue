@@ -2,8 +2,6 @@ import { FETCH_MEALS } from '../actions/types';
 import { FETCH_CATEGORIES } from '../actions/types';
 import { FETCH_DETAIL_MEAL } from '../actions/types';
 import { FETCH_BY_NAME } from '../actions/types';
-import { FETCH_BY_INGRIDIENT } from '../actions/types';
-import { FETCH_BY_AREA } from '../actions/types';
 
 const fetchMeals = (category) => dispatch => {
     const abortCont = new AbortController();
@@ -50,20 +48,6 @@ const fetchDetailMeal = (mealID) => dispatch => {
     return () => abortCont.abort();
 }
 
-const fetchByName = (e) => dispatch => {
-    const abortCont = new AbortController();
-
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${e}`)
-        .then(res => res.json())
-        .then(data => 
-            dispatch({
-                type: FETCH_BY_NAME,
-                payload: data.meals !== null ? data.meals[0] : "",
-            })
-        );
-    
-    return () => abortCont.abort();
-}
 const fetchByIngridient = (e) => dispatch => {
     const abortCont = new AbortController();
 
@@ -99,4 +83,4 @@ const fetchByArea = (e) => dispatch => {
     return () => abortCont.abort();
 }
 
-export { fetchMeals, fetchCategories, fetchDetailMeal, fetchByName, fetchByIngridient, fetchByArea };
+export { fetchMeals, fetchCategories, fetchDetailMeal, fetchByIngridient, fetchByArea };

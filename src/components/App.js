@@ -3,7 +3,6 @@ import {
   fetchCategories,
   fetchMeals,
   fetchDetailMeal,
-  fetchByName,
   fetchByIngridient,
   fetchByArea,
 } from "../actions/index";
@@ -15,7 +14,6 @@ function App({
   fetchMeals,
   fetchCategories,
   fetchDetailMeal,
-  fetchByName,
   fetchByIngridient,
   fetchByArea,
   meals,
@@ -41,21 +39,12 @@ function App({
     e.preventDefault();
     const inputValue = e.target[0].value;
 
-    if (e.target[0].name === "by-name") {
-      fetchByName(inputValue);
-    } else {
-      fetchByIngridient(inputValue);
-      fetchByArea(inputValue);
-    }
+    fetchByIngridient(inputValue);
+    fetchByArea(inputValue);
   }
 
   return (
     <main>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input placeholder="Search meal by name, main ingredient, area" name="by-name" />
-        <button type="submit"><i className="fas fa-search"></i></button>
-      </form>
-
       <form onSubmit={(e) => handleSubmit(e)}>
         <input placeholder="Search meal by main ingredient (e.g. Chicken Breast) and area (e.g. American, Canadian)" name="by-cat-and-area" />
         <button type="submit"><i className="fas fa-search"></i></button>
@@ -74,4 +63,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { fetchMeals, fetchCategories, fetchDetailMeal, fetchByName, fetchByIngridient, fetchByArea })(App);
+export default connect(mapStateToProps, { fetchMeals, fetchCategories, fetchDetailMeal, fetchByIngridient, fetchByArea })(App);
