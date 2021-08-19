@@ -54,12 +54,52 @@
     }
 
     .detail-con h1 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin: 1rem 0;
     }
 
+    .detail-main {
+        flex-direction: column;
+    }
+
     iframe {
-        width: 10rem;
+        width: 14rem;
+        height: 10rem;
+    }
+
+    .detail-main img {
+        width: 14rem;
+    }
+
+    .instructions {
+        margin: 0 0.5rem;
+    }
+
+    .instructions h2 {
+        font-size: 1.2rem;
+        text-indent: 0;
+    }
+
+    .instructions p {
+        font-size: 0.9rem;
+    }
+
+    .d-paragraph {
+        text-indent: 0;
+        font-size: 1rem;
+    }
+
+    .d-title {
+        font-size: 1.2rem;
+    }
+
+    .detail-con .d-table {
+        margin: 2rem auto 1rem auto;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.9rem;
     }
 }
 
