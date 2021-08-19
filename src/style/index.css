@@ -151,7 +151,7 @@ form i {
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
+  display: none;
   width: 20rem;
   background-color: #00203FFF;
   font-weight: bold;
@@ -169,7 +169,7 @@ form i {
 }
 
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  display: inline-block;
 }
 
 .meal-container {
