@@ -212,11 +212,69 @@ form i {
     padding: 0.2rem;
 }
 
+/* Details */
+.detail-con {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.detail-con h1 {
+    font-size: 3rem;
+    margin: 2rem 0 3rem 0;
+    border-bottom: 2px solid #00203FFF;
+    width: max-content;
+    line-height: 1;
+}
+
+.detail-main {
+    justify-content: space-between;
+}
+
+.instructions {
+    margin: 0 1rem 0 2rem;
+    text-align:justify;
+}
+
+.instructions h2 {
+    font-size: 3rem;
+    text-indent: 2rem;
+}
+
+.instructions p {
+    font-size: 1.2rem;
+    text-indent: 2rem;
+}
+
+iframe {
+    width: 40rem;
+    height: 20rem;
+}
+
+.detail-main img {
+    width: 40rem;
+}
+
+.d-paragraph {
+    text-indent: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.d-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.detail-con .d-table {
+    margin: 1rem auto 2rem auto;
+}
+
 /* Table */
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 80%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 td, th {
