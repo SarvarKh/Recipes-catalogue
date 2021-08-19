@@ -177,12 +177,39 @@ form i {
     justify-content: space-around;
 }
 
+.meal-container a {
+    text-decoration: none;
+}
+
+.t-meal {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
 .meal {
-    width: 20rem;
+    width: 16rem;
+    margin: 0 1rem 2rem 1rem;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.meal:hover {
+    box-shadow: 8px 8px 8px 0 rgba(0,0,0,0.2);
 }
 
 .meal img {
-    width: 20rem;
+    display: block;
+    width: 14rem;
+    border-radius: 0.4rem;
+    margin: 0 auto;
+    padding-top: 0.5rem;
+}
+
+.meal h3 {
+    text-align: center;
+    color: rgb(194, 193, 193);
+    font-size: 0.9rem;
+    padding: 0.2rem;
 }
 
 /* Table */
