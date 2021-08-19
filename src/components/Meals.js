@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Meals = ({meals, clickOnDetailMeal}) => {
     return (
         <>
-            <h1>Meals</h1>
+            <h1 className="titles">Meals</h1>
             <div className="flex meal-container">
                 {
                 meals !== undefined ?

@@ -49,11 +49,11 @@ a:hover {
   opacity: 0.5;
 }
 
-
 main {
     padding: 1rem;
     margin-top: 5rem;
     color: #00203FFF;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 main a {
@@ -96,13 +96,30 @@ form i {
     color: #00203FFF;
 }
 
+.titles {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 1.5rem auto 0.5rem auto;
+    width: max-content;
+    background: #00203FFF;
+    color: rgb(194, 193, 193);
+    border-left: 0.5rem solid rgb(194, 193, 193);
+    padding: 0.1rem 1rem;
+    border-radius: 0.2rem;
+}
+
 .flex {
     display: flex;
 }
 
 .categories-container {
     flex-wrap: wrap;
-    justify-content: space-around;
+    flex-grow: 1;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cat-item {
+    flex: 1 0 14.2%;
 }
 
 .category {
@@ -113,11 +130,46 @@ form i {
     width: 10rem;
 }
 
+.cat-name {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(194, 193, 193);
+}
+
 .category-desc {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    width: 10rem;
+}
+
+.category-desc:hover {
+    overflow: visible;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 20rem;
+  background-color: #00203FFF;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .meal-container {
