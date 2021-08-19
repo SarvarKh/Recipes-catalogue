@@ -5,13 +5,55 @@
     font-family: 'montserrat', sans-serif;
 }
 
+.quote {
+    font-family: 'Style Script', cursive;
+    color: rgb(194, 193, 193);
+    font-size: 2rem;
+}
+
 body {
     margin: 0;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  background: #00203FFF;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+.logo {
+  width: 10rem;
+  height: 4.5rem;
+  background-image: url("../assets/logo5_resized.gif");
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  margin: 0.5rem 1rem;
+}
+
+.navbar a {
+  margin-right: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Style Script', cursive;
+  font-size: 2.2rem;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+
 main {
     padding: 1rem;
     margin-top: 5rem;
+    color: #00203FFF;
 }
 
 main a {
