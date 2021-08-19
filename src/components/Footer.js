@@ -1,7 +1,7 @@
 
 export default function Footer() {
     return (
-      <div>
+      <>
         <footer>
             <div>
                 Copyright © 2021 Sarvar Khalimov
@@ -10,7 +10,7 @@ export default function Footer() {
                 <a className="icon-link" href="https://sarvarkh.github.io/portfolio/" target="_blank"><i class="fas fa-folder-open" aria-hidden="true"></i></a>
             </div>
         </footer>
-      </div>
+      </>
     );
   }
   

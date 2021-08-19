@@ -1,4 +1,12 @@
 @media only screen and (max-width: 600px) {
+    .logo {
+        margin: 0;
+    }
+
+    .navbar a {
+        margin-right: 0;
+    }
+
     .quote {
         display: none;
     }
@@ -10,6 +18,19 @@
 
     form input {
         width: 100%;
+        padding: 0.1rem 0.1rem 0.1rem 0.5rem;
+    }
+
+    form i {
+        padding: 0.1rem;
+    }
+
+    form .fas {
+        font-size: 1rem;
+    }
+
+    .titles {
+        font-size: 1.2rem;
     }
 
     .categories-container {
