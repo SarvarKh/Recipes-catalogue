@@ -1,114 +1,117 @@
 @media only screen and (max-width: 600px) {
-    .logo {
-        margin: 0;
-    }
+  .logo {
+    margin: 0;
+  }
 
-    .navbar a {
-        margin-right: 1rem;
-    }
+  .navbar a {
+    margin-right: 1rem;
+  }
 
-    .quote {
-        display: none;
-    }
+  .quote {
+    display: none;
+  }
 
-    form {
-        margin: 1rem auto;
-        width: 100%;
-    }
+  form {
+    margin: 1rem auto;
+    width: 100%;
+  }
 
-    form input {
-        width: 100%;
-        padding: 0.1rem 0.1rem 0.1rem 0.5rem;
-    }
+  form input {
+    width: 100%;
+    padding: 0.1rem 0.1rem 0.1rem 0.5rem;
+  }
 
-    form i {
-        padding: 0.1rem;
-    }
+  form i {
+    padding: 0.1rem;
+  }
 
-    form .fas {
-        font-size: 1rem;
-    }
+  form .fas {
+    font-size: 1rem;
+  }
 
-    .titles {
-        font-size: 1.2rem;
-    }
+  .titles {
+    font-size: 1.2rem;
+  }
 
-    .categories-container {
-        width: 100%;
-    }
+  .categories-container {
+    width: 100%;
+  }
 
-    .category {
-        width: 5rem;
-    }
+  .category {
+    width: 5rem;
+  }
 
-    .category img {
-        width: 5rem;
-    }
+  .category img {
+    width: 5rem;
+  }
 
-    .meal {
-        width: 8rem;
-    }
+  .meal {
+    width: 8rem;
+  }
 
-    .meal img {
-        width: 7rem;
-    }
+  .meal img {
+    width: 7rem;
+  }
 
-    .detail-con h1 {
-        font-size: 1.4rem;
-        margin: 1rem 0;
-    }
+  .detail-con h1 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
 
-    .detail-main {
-        flex-direction: column;
-    }
+  .detail-main {
+    flex-direction: column;
+  }
 
-    iframe {
-        width: 14rem;
-        height: 10rem;
-    }
+  iframe {
+    width: 14rem;
+    height: 10rem;
+  }
 
-    .detail-main img {
-        width: 14rem;
-    }
+  .detail-main img {
+    width: 14rem;
+  }
 
-    .instructions {
-        margin: 0 0.5rem;
-    }
+  .instructions {
+    margin: 0 0.5rem;
+  }
 
-    .instructions h2 {
-        font-size: 1.2rem;
-        text-indent: 0;
-    }
+  .instructions h2 {
+    font-size: 1.2rem;
+    text-indent: 0;
+  }
 
-    .instructions p {
-        font-size: 0.9rem;
-    }
+  .instructions p {
+    font-size: 0.9rem;
+  }
 
-    .d-paragraph {
-        text-indent: 0;
-        font-size: 1rem;
-    }
+  .d-paragraph {
+    text-indent: 0;
+    font-size: 1rem;
+  }
 
-    .d-title {
-        font-size: 1.2rem;
-    }
+  .d-title {
+    font-size: 1.2rem;
+  }
 
-    .detail-con .d-table {
-        margin: 2rem auto 1rem auto;
-    }
+  .detail-con .d-table {
+    margin: 2rem auto 1rem auto;
+  }
 
-    table {
-        width: 100%;
-        font-size: 0.9rem;
-    }
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+
 /* @media only screen and (min-width: 600px) {...} */
 
 /* Medium devices (landscape tablets, 768px and up) */
+
 /* @media only screen and (min-width: 768px) {...} */
 
 /* Large devices (laptops/desktops, 992px and up) */
+
 /* @media only screen and (min-width: 992px) {...} */

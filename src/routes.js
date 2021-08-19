@@ -1,15 +1,16 @@
+import {
+  BrowserRouter, Switch, Route, Link,
+} from 'react-router-dom';
 import App from './components/App';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import DetailMeal from './components/DetailMeal';
 import Error from './components/Error';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { Link } from "react-router-dom";
 
 const Routes = () => (
   <BrowserRouter>
     <div className="navbar">
-      <Link to="/" className="logo"></Link>
+      <Link to="/" className="logo" />
       <h2 className="quote">Good food is good mood</h2>
       <Navbar />
     </div>
@@ -23,4 +24,3 @@ const Routes = () => (
 );
 
 export default Routes;
-
