@@ -1,0 +1,36 @@
+@media only screen and (max-width: 600px) {
+    .quote {
+        display: none;
+    }
+
+    form {
+        margin: 1rem auto;
+        width: 100%;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    .categories-container {
+        width: 100%;
+    }
+
+    .category {
+        width: 5rem;
+    }
+
+    .category img {
+        width: 5rem;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
