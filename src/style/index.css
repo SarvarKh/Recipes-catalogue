@@ -114,16 +114,20 @@ form i {
 .categories-container {
   flex-wrap: wrap;
   flex-grow: 1;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
 .cat-item {
   flex: 1 0 14.2%;
+  margin: 0 auto 0.5rem auto;
+  border: none;
+  background: none;
 }
 
 .category {
   width: 10rem;
+  margin: 0 auto;
 }
 
 .category img {
