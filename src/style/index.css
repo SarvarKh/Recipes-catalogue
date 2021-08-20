@@ -21,7 +21,6 @@ body {
   align-items: center;
   font-size: 1.5rem;
   background: #00203fff;
-  display: flex;
   position: fixed;
   width: 100%;
   top: 0;
@@ -35,6 +34,15 @@ body {
   background-repeat: no-repeat;
   background-size: 10rem;
   margin: 0.5rem 1rem;
+}
+
+main a {
+  color: #00203fff;
+}
+
+footer a {
+  padding: 0 0.5rem;
+  color: #fff;
 }
 
 .navbar a {
@@ -54,10 +62,6 @@ main {
   margin-top: 5rem;
   color: #00203fff;
   font-family: 'Open Sans Condensed', sans-serif;
-}
-
-main a {
-  color: #00203fff;
 }
 
 form {
@@ -312,9 +316,4 @@ footer {
 footer .fas {
   font-size: 0.6rem;
   margin: 0;
-}
-
-footer a {
-  padding: 0 0.5rem;
-  color: #fff;
 }
