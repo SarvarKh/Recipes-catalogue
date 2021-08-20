@@ -1,11 +1,11 @@
 import {
   BrowserRouter, Switch, Route, Link,
 } from 'react-router-dom';
-import App from './components/App';
-import DetailMeal from './components/DetailMeal';
-import Error from './components/Error';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import App from './components/container/App';
+import DetailMeal from './components/container/DetailMeal';
+import Error from './components/presentation/Error';
+import Navbar from './components/presentation/Navbar';
+import Footer from './components/presentation/Footer';
 
 const Routes = () => (
   <BrowserRouter>

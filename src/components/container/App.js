@@ -7,9 +7,9 @@ import {
   fetchDetailMeal,
   fetchByIngridient,
   fetchByArea,
-} from '../actions/index';
-import Categories from './Categories';
-import Meals from './Meals';
+} from '../../actions/index';
+import Categories from '../presentation/Categories';
+import Meals from '../presentation/Meals';
 
 function App({
   fetchMeals,
