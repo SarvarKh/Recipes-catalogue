@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import MapMeals from './MapMeals';
 
 const Meals = ({ meals, clickOnDetailMeal }) => (
   <>
@@ -7,14 +7,7 @@ const Meals = ({ meals, clickOnDetailMeal }) => (
     <div className="flex meal-container">
       {
                 meals !== undefined
-                  ? meals.map((meal) => (
-                    <Link to="./components/DetailMeal" key={meal.idMeal} className="meal" onClick={() => clickOnDetailMeal(meal.idMeal)}>
-                      <div className="img-container">
-                        <img src={meal.strMealThumb} alt="Meal" />
-                      </div>
-                      <h3>{meal.strMeal}</h3>
-                    </Link>
-                  ))
+                  ? <MapMeals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
                   : <h2>Loading...</h2>
                 }
     </div>

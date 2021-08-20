@@ -9,7 +9,6 @@ const Categories = ({ categories, handleClick }) => (
                 categories !== undefined
                   ? <MapCategories categories={categories} handleClick={handleClick} />
                   : <h2>Loading...</h2>
-
                 }
     </div>
   </>
