@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const DetailMeal = ({ detailMeal }) => (
   <main>
@@ -9,8 +10,8 @@ const DetailMeal = ({ detailMeal }) => (
                       <h1>{detailMeal.strMeal}</h1>
                       <div className="detail-main flex">
                         <div className="d-img">
-                          <iframe src={`https://www.youtube.com/embed/${detailMeal.strYoutube.split('=')[1]}`} />
-                          <img src={detailMeal.strMealThumb} />
+                          <iframe src={`https://www.youtube.com/embed/${detailMeal.strYoutube.split('=')[1]}`} title={detailMeal.strCategory} />
+                          <img src={detailMeal.strMealThumb} alt="Meal" />
                         </div>
                         <div className="instructions">
                           <h2>How to prepare?</h2>
@@ -35,7 +36,7 @@ const DetailMeal = ({ detailMeal }) => (
                             {' '}
                             to the
                             {' '}
-                            <a src={detailMeal.strSource}>Source</a>
+                            <a href={detailMeal.strSource}>Source</a>
                           </div>
                         </div>
                       </div>
@@ -247,3 +248,7 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, null)(DetailMeal);
+
+DetailMeal.propTypes = {
+  detailMeal: PropTypes.instanceOf(Object).isRequired,
+};
