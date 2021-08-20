@@ -51,10 +51,7 @@ const fetchByIngridient = (e) => (dispatch) => {
         type: FETCH_MEALS,
         payload: data.meals,
       })
-      : null))
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      : null));
 
   return () => abortCont.abort();
 };
