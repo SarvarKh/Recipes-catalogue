@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   fetchCategories,
   fetchMeals,
@@ -47,7 +48,9 @@ function App({
     <main>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input placeholder="Search meal by main ingredient (e.g. Chicken Breast) and area (e.g. American, Canadian)" name="by-cat-and-area" />
-        <button type="submit"><i className="fas fa-search" /></button>
+        <button type="submit">
+          <i className="fas fa-search" />
+        </button>
       </form>
 
       <Categories categories={categories} handleClick={handleClick} />
@@ -64,3 +67,13 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, {
   fetchMeals, fetchCategories, fetchDetailMeal, fetchByIngridient, fetchByArea,
 })(App);
+
+App.propTypes = {
+  meals: PropTypes.instanceOf(Array).isRequired,
+  categories: PropTypes.instanceOf(Array).isRequired,
+  fetchMeals: PropTypes.func.isRequired,
+  fetchCategories: PropTypes.func.isRequired,
+  fetchDetailMeal: PropTypes.func.isRequired,
+  fetchByIngridient: PropTypes.func.isRequired,
+  fetchByArea: PropTypes.func.isRequired,
+};

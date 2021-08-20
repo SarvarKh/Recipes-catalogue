@@ -1,5 +1,5 @@
 import {
-  FETCH_MEALS, FETCH_CATEGORIES, FETCH_DETAIL_MEAL, FETCH_BY_NAME,
+  FETCH_MEALS, FETCH_CATEGORIES, FETCH_DETAIL_MEAL,
 } from './types';
 
 const fetchMeals = (category) => (dispatch) => {
