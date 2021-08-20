@@ -6,10 +6,10 @@ const Meals = ({ meals, clickOnDetailMeal }) => (
     <h1 className="titles t-meal">Meals</h1>
     <div className="flex meal-container">
       {
-                meals !== undefined
-                  ? <MapMeals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
-                  : <h2>Loading...</h2>
-                }
+        meals !== undefined
+          ? <MapMeals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
+          : <h2>Loading...</h2>
+      }
     </div>
   </>
 );

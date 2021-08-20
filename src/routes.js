@@ -15,8 +15,8 @@ const Routes = () => (
       <Navbar />
     </div>
     <Switch>
-      <Route path="/" component={App} exact />
-      <Route path="/components/DetailMeal" component={DetailMeal} />
+      <Route exact path="/" component={App} />
+      <Route exact path="/components/DetailMeal" component={DetailMeal} />
       <Route component={Error} />
     </Switch>
     <Footer />

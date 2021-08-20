@@ -6,10 +6,10 @@ const Categories = ({ categories, handleClick }) => (
     <h1 className="titles">Categories</h1>
     <div className="flex categories-container">
       {
-                categories !== undefined
-                  ? <MapCategories categories={categories} handleClick={handleClick} />
-                  : <h2>Loading...</h2>
-                }
+        categories !== undefined
+          ? <MapCategories categories={categories} handleClick={handleClick} />
+          : <h2>Loading...</h2>
+      }
     </div>
   </>
 );
