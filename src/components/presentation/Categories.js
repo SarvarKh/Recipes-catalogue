@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import MapCategories from './MapCategories';
 
 const Categories = ({ categories, handleClick }) => (
   <>
@@ -6,17 +7,7 @@ const Categories = ({ categories, handleClick }) => (
     <div className="flex categories-container">
       {
                 categories !== undefined
-                  ? categories.map((category) => (
-                    <button type="button" onClick={() => handleClick(category.strCategory)} key={category.idCategory} className="cat-item">
-                      <div className="category">
-                        <img src={category.strCategoryThumb} alt="Category" />
-                        <div className="cat-name tooltip">
-                          {category.strCategory}
-                          <span className="category-desc tooltiptext">{category.strCategoryDescription}</span>
-                        </div>
-                      </div>
-                    </button>
-                  ))
+                  ? <MapCategories categories={categories} handleClick={handleClick} />
                   : <h2>Loading...</h2>
 
                 }
