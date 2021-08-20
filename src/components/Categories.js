@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Categories = ({ categories, handleClick }) => (
   <>
     <h1 className="titles">Categories</h1>
@@ -5,15 +7,15 @@ const Categories = ({ categories, handleClick }) => (
       {
                 categories !== undefined
                   ? categories.map((category) => (
-                    <a onClick={() => handleClick(category.strCategory)} key={category.idCategory} className="cat-item">
+                    <button type="button" onClick={() => handleClick(category.strCategory)} key={category.idCategory} className="cat-item">
                       <div className="category">
-                        <img src={category.strCategoryThumb} />
+                        <img src={category.strCategoryThumb} alt="Category" />
                         <div className="cat-name tooltip">
                           {category.strCategory}
                           <span className="category-desc tooltiptext">{category.strCategoryDescription}</span>
                         </div>
                       </div>
-                    </a>
+                    </button>
                   ))
                   : <h2>Loading...</h2>
 
@@ -23,3 +25,8 @@ const Categories = ({ categories, handleClick }) => (
 );
 
 export default Categories;
+
+Categories.propTypes = {
+  categories: PropTypes.instanceOf(Array).isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
