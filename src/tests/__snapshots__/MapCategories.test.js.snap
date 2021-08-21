@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <button
+    className="cat-item"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="category"
+    >
+      <img
+        alt="Category"
+        src="beef"
+      />
+      <div
+        className="cat-name tooltip"
+      >
+        Beef
+        <span
+          className="category-desc tooltiptext"
+        >
+          Culinary name...
+        </span>
+      </div>
+    </div>
+  </button>,
+  <button
+    className="cat-item"
+    onClick={[Function]}
+    type="button"
+  >
+    <div
+      className="category"
+    >
+      <img
+        alt="Category"
+        src="lamb"
+      />
+      <div
+        className="cat-name tooltip"
+      >
+        Lamb
+        <span
+          className="category-desc tooltiptext"
+        >
+          Culinary name...
+        </span>
+      </div>
+    </div>
+  </button>,
+]
+`;
