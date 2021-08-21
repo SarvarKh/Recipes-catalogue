@@ -28,7 +28,7 @@
 ## Testing with Jest & React Testing Library
 
 <div align="center">
-  <img src="screenshots/testing.png?raw=true" width="100%" height="auto"/>
+  <img src="screenshots/testing.png?raw=true" width="70%" height="auto"/>
 </div>
 
 ## Getting Started
@@ -69,3 +69,11 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+#### API server
+For this app uses the Meal DB API server.
+
+Relevant links:
+[Website](https://www.themealdb.com/)
+[Facebook page](https://www.facebook.com/TheDataDB/)
+[Twitter page](https://twitter.com/TheAudioDB)
