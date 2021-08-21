@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="by-cat-and-area"
+      placeholder="Search meal by main ingredient (e.g. Chicken Breast) and area (e.g. American, Canadian)"
+    />
+    <button
+      type="submit"
+    >
+      <i
+        className="fas fa-search"
+      />
+    </button>
+  </form>
+  <h1
+    className="titles"
+  >
+    Categories
+  </h1>
+  <div
+    className="flex categories-container"
+  >
+    <h2>
+      Loading...
+    </h2>
+  </div>
+  <h1
+    className="titles t-meal"
+  >
+    Meals
+  </h1>
+  <div
+    className="flex meal-container"
+  >
+    <h2>
+      Loading...
+    </h2>
+  </div>
+</main>
+`;
