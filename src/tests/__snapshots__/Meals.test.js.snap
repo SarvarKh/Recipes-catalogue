@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <h1
+    className="titles t-meal"
+  >
+    Meals
+  </h1>,
+  <div
+    className="flex meal-container"
+  >
+    <h2>
+      Loading...
+    </h2>
+  </div>,
+]
+`;
