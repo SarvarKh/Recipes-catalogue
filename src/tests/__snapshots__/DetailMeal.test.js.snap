@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<main>
+  <h2>
+    Please go back to the previous page and select meal to see details...
+  </h2>
+</main>
+`;
