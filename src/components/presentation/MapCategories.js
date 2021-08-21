@@ -12,5 +12,4 @@ const MapCategories = ({ categories, handleClick }) => (
   ))
 );
 
-
 export default MapCategories;
