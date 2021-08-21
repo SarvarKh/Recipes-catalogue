@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <a
+    className="meal"
+    href="./components/DetailMeal#88"
+    onClick={[Function]}
+  >
+    <div
+      className="img-container"
+    >
+      <img
+        alt="Meal"
+        src="beef"
+      />
+    </div>
+    <h3>
+      Beef
+    </h3>
+  </a>,
+  <a
+    className="meal"
+    href="./components/DetailMeal#92"
+    onClick={[Function]}
+  >
+    <div
+      className="img-container"
+    >
+      <img
+        alt="Meal"
+        src="lamb"
+      />
+    </div>
+    <h3>
+      Lamb
+    </h3>
+  </a>,
+]
+`;
