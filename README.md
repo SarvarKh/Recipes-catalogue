@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Easiy recipes catalogue
+# Easy recipes catalogue
 
 > The Easy Recipes is a single-page application built with React and Redux which fetches data from the API. The app contains main and detail pages with responsive styling. Every page, the main page, and pages for each item have a unique route within the SPA. React components, as well as Redux action creators, were tested with Jest and React Testing Library.
 
