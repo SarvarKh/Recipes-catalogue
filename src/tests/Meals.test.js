@@ -7,22 +7,26 @@ const meals = [
   {
     strMeal: 'Apam balik',
     strMealThumb: 'https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg',
-    idMeal: '53049'
+    idMeal: '53049',
   },
   {
     strMeal: 'Apple & Blackberry Crumble',
     strMealThumb: 'https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg',
-    idMeal: '52893'
+    idMeal: '52893',
   },
 ];
 
 const clickOnDetailMeal = () => (
-    console.log('Test Meals and logging Meals')
-)
+  'Test Meals and logging Meals'
+);
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<BrowserRouter><Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} /></BrowserRouter>)
+    .create(
+      <BrowserRouter>
+        <Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
+      </BrowserRouter>,
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

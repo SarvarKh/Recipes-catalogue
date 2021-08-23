@@ -1,8 +1,8 @@
 import mealsReducer from '../../reducers/mealsReducer';
 
 test('should return the initial state', () => {
-  expect(mealsReducer(undefined, {})).toEqual({})
-})
+  expect(mealsReducer(undefined, {})).toEqual({});
+});
 
 test('should add meals to redux store', () => {
   const previousState = {
@@ -13,12 +13,12 @@ test('should add meals to redux store', () => {
   };
   const action = {
     type: 'FETCH_MEALS',
-    payload: ["New meal", "Bunch of meals"],
-  }
+    payload: ['New meal', 'Bunch of meals'],
+  };
   expect(mealsReducer(previousState, action)).toEqual({
     detailMeal: {},
-    meals: ["New meal", "Bunch of meals"],
+    meals: ['New meal', 'Bunch of meals'],
     categories: [],
     searchedItems: [],
-  })
-})
+  });
+});

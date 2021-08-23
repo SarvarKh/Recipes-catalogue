@@ -1,8 +1,8 @@
 import detailMealReducer from '../../reducers/detailMealReducer';
 
 test('should return the initial state', () => {
-  expect(detailMealReducer(undefined, {})).toEqual({})
-})
+  expect(detailMealReducer(undefined, {})).toEqual({});
+});
 
 test('should add a detail deal to redux store', () => {
   const previousState = {
@@ -13,12 +13,12 @@ test('should add a detail deal to redux store', () => {
   };
   const action = {
     type: 'FETCH_DETAIL_MEAL',
-    payload: "New meal",
-  }
+    payload: 'New meal',
+  };
   expect(detailMealReducer(previousState, action)).toEqual({
-    detailMeal: "New meal",
+    detailMeal: 'New meal',
     meals: [],
     categories: [],
     searchedItems: [],
-  })
-})
+  });
+});
