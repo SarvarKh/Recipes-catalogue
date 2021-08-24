@@ -28,13 +28,13 @@
 ## Project Tree Diagram
 
 <div align="center">
-  <img src="screenshots/diagram-1.png?raw=true" width="100%" height="auto"/>
+  <img src="screenshots/diagram-2.png?raw=true" width="100%" height="auto"/>
 </div>
 
 ## Testing with Jest & React Testing Library
 
 <div align="center">
-  <img src="screenshots/testing.png?raw=true" width="70%" height="auto"/>
+  <img src="screenshots/testing-2.png?raw=true" width="70%" height="auto"/>
 </div>
 
 ## Getting Started
