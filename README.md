@@ -25,6 +25,10 @@
 
 [Live Demo Link](https://easy-recipes-catalogue.netlify.app/)
 
+### Project Videos
+- [Project demo](https://youtu.be/K9bsIsaHN70)
+- [Project Technical concepts](https://youtu.be/lXN7O4bP7z4)
+
 ## Project Tree Diagram
 
 <div align="center">
