@@ -5,8 +5,12 @@ import rootReducer from './reducers/rootReducer';
 
 const initialState = {
   detailMeal: {},
-  meals: [],
-  categories: [],
+  meals: {
+    meals: [],
+  },
+  categories: {
+    categories: [],
+  },
   searchedItems: [],
 };
 
