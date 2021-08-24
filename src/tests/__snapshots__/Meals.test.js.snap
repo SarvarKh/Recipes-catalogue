@@ -12,7 +12,7 @@ Array [
   >
     <a
       className="meal"
-      href="./components/DetailMeal#53049"
+      href="/detail/53049"
       onClick={[Function]}
     >
       <div
@@ -29,7 +29,7 @@ Array [
     </a>
     <a
       className="meal"
-      href="./components/DetailMeal#52893"
+      href="/detail/52893"
       onClick={[Function]}
     >
       <div

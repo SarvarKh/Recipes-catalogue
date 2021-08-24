@@ -4,7 +4,7 @@ exports[`renders correctly 1`] = `
 Array [
   <a
     className="meal"
-    href="./components/DetailMeal#88"
+    href="/detail/88"
     onClick={[Function]}
   >
     <div
@@ -21,7 +21,7 @@ Array [
   </a>,
   <a
     className="meal"
-    href="./components/DetailMeal#92"
+    href="/detail/92"
     onClick={[Function]}
   >
     <div
