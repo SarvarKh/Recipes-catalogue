@@ -4,8 +4,7 @@ const MapMeals = ({ meals, clickOnDetailMeal }) => (
   meals.map((meal) => (
     <Link
       to={{
-        pathname: './components/DetailMeal',
-        hash: meal.idMeal,
+        pathname: `/detail/${meal.idMeal}`,
         state: meal,
       }}
       key={meal.idMeal}
