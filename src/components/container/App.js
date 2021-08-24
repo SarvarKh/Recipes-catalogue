@@ -22,9 +22,6 @@ function App({
 }) {
   useEffect(() => {
     fetchMeals('Beef');
-  }, []);
-
-  useEffect(() => {
     fetchCategories();
   }, []);
 
