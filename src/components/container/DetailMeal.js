@@ -5,7 +5,7 @@ import MapDetailMeal from '../presentation/MapDetailMeal';
 const DetailMeal = ({ detailMeal }) => (
   <main>
     {
-      detailMeal !== undefined
+      Object.keys(detailMeal).length !== 0
         ? <MapDetailMeal detailMeal={detailMeal} />
         : <h2>Please go back to the previous page and select meal to see details...</h2>
     }
