@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import MapCategories from './MapCategories';
+import MapCategories from '../container/MapCategories';
 
 const Categories = ({ handleClick }) => (
   <>
