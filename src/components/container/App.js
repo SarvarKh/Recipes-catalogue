@@ -18,7 +18,6 @@ function App({
   fetchByIngridient,
   fetchByArea,
   meals,
-  categories,
 }) {
   useEffect(() => {
     fetchMeals('Beef');
@@ -50,7 +49,7 @@ function App({
         </button>
       </form>
 
-      <Categories categories={categories} handleClick={handleClick} />
+      <Categories handleClick={handleClick} />
       <Meals meals={meals} clickOnDetailMeal={clickOnDetailMeal} />
     </main>
   );
@@ -58,7 +57,6 @@ function App({
 
 const mapStateToProps = (state) => ({
   meals: state.meals.meals,
-  categories: state.categories.categories,
 });
 
 export default connect(mapStateToProps, {
@@ -67,7 +65,6 @@ export default connect(mapStateToProps, {
 
 App.propTypes = {
   meals: PropTypes.instanceOf(Array).isRequired,
-  categories: PropTypes.instanceOf(Array).isRequired,
   fetchMeals: PropTypes.func.isRequired,
   fetchCategories: PropTypes.func.isRequired,
   fetchDetailMeal: PropTypes.func.isRequired,
