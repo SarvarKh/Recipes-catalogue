@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<footer>
+  <div>
+    Copyright © 2021 Sarvar Khalimov
+    <a
+      className="icon-link"
+      href="https://github.com/SarvarKh"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-github"
+      />
+    </a>
+    <a
+      className="icon-link"
+      href="https://www.linkedin.com/in/sarvar-khalimov/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <i
+        aria-hidden="true"
+        className="fab fa-linkedin"
+      />
+    </a>
+    <a
+      className="icon-link"
+      href="https://sarvarkh.github.io/portfolio/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <i
+        aria-hidden="true"
+        className="fas fa-folder-open"
+      />
+    </a>
+  </div>
+</footer>
+`;

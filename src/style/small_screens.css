@@ -1,0 +1,104 @@
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin: 0;
+  }
+
+  .navbar a {
+    margin-right: 1rem;
+  }
+
+  .quote {
+    display: none;
+  }
+
+  form {
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  form input {
+    width: 100%;
+    padding: 0.1rem 0.1rem 0.1rem 0.5rem;
+  }
+
+  form i {
+    padding: 0.1rem;
+  }
+
+  form .fas {
+    font-size: 1rem;
+  }
+
+  .titles {
+    font-size: 1.2rem;
+  }
+
+  .categories-container {
+    width: 100%;
+  }
+
+  .category {
+    width: 5rem;
+  }
+
+  .category img {
+    width: 5rem;
+  }
+
+  .meal {
+    width: 8rem;
+  }
+
+  .meal img {
+    width: 7rem;
+  }
+
+  .detail-con h1 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+
+  .detail-main {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 14rem;
+    height: 10rem;
+  }
+
+  .detail-main img {
+    width: 14rem;
+  }
+
+  .instructions {
+    margin: 0 0.5rem;
+  }
+
+  .instructions h2 {
+    font-size: 1.2rem;
+    text-indent: 0;
+  }
+
+  .instructions p {
+    font-size: 0.9rem;
+  }
+
+  .d-paragraph {
+    text-indent: 0;
+    font-size: 1rem;
+  }
+
+  .d-title {
+    font-size: 1.2rem;
+  }
+
+  .detail-con .d-table {
+    margin: 2rem auto 1rem auto;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

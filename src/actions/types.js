@@ -1,0 +1,4 @@
+export const FETCH_DETAIL_MEAL = 'FETCH_DETAIL_MEAL';
+export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
+export const FETCH_MEALS = 'FETCH_MEALS';
+export const FETCH_BY_NAME = 'FETCH_BY_NAME';

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <h1
+    className="titles t-meal"
+  >
+    Meals
+  </h1>,
+  <div
+    className="flex meal-container"
+  >
+    <a
+      className="meal"
+      href="/detail/53049"
+      onClick={[Function]}
+    >
+      <div
+        className="img-container"
+      >
+        <img
+          alt="Meal"
+          src="https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg"
+        />
+      </div>
+      <h3>
+        Apam balik
+      </h3>
+    </a>
+    <a
+      className="meal"
+      href="/detail/52893"
+      onClick={[Function]}
+    >
+      <div
+        className="img-container"
+      >
+        <img
+          alt="Meal"
+          src="https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"
+        />
+      </div>
+      <h3>
+        Apple & Blackberry Crumble
+      </h3>
+    </a>
+  </div>,
+]
+`;
